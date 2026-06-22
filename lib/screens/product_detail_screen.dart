@@ -14,7 +14,7 @@ class ProductDetailScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 300,
+            expandedHeight: 340,
             pinned: true,
             backgroundColor: Colors.white,
             leading: GestureDetector(
@@ -35,17 +35,20 @@ class ProductDetailScreen extends StatelessWidget {
               ),
             ),
             flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(30),
-                child: Image.network(
-                  product.imageUrl,
-                  fit: BoxFit.contain,
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Center(
-                      child: Icon(Icons.image_not_supported_outlined, size: 80, color: Colors.grey),
-                    );
-                  },
+              background: SafeArea(
+                bottom: false,
+                child: Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.fromLTRB(30, 16, 30, 30),
+                  child: Image.network(
+                    product.imageUrl,
+                    fit: BoxFit.contain,
+                    errorBuilder: (context, error, stackTrace) {
+                      return const Center(
+                        child: Icon(Icons.image_not_supported_outlined, size: 80, color: Colors.grey),
+                      );
+                    },
+                  ),
                 ),
               ),
             ),
