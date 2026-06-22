@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
-          'Sepetim',
+          'My Cart',
           style: TextStyle(
             fontWeight: FontWeight.w700,
             fontSize: 20,
@@ -42,7 +42,7 @@ class CartScreen extends StatelessWidget {
                   CartService.instance.clear();
                 },
                 child: const Text(
-                  'Temizle',
+                  'Clear',
                   style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600),
                 ),
               );
@@ -72,7 +72,7 @@ class CartScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   const Text(
-                    'Sepetiniz boş',
+                    'Your cart is empty',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -81,7 +81,7 @@ class CartScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   const Text(
-                    'Ürün detayından sepete ekleyebilirsiniz',
+                    'Add products from the detail page',
                     style: TextStyle(fontSize: 13, color: Colors.grey),
                   ),
                 ],
@@ -226,11 +226,11 @@ class _CartSummary extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '${items.length} ürün',
+                '${items.length} item${items.length > 1 ? 's' : ''}',
                 style: const TextStyle(fontSize: 14, color: Colors.grey),
               ),
               Text(
-                'Toplam: \$${total.toStringAsFixed(2)}',
+                'Total: \$${total.toStringAsFixed(2)}',
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
@@ -247,7 +247,7 @@ class _CartSummary extends StatelessWidget {
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    content: const Text('Ödeme sayfası henüz hazır değil 😅'),
+                    content: const Text('Payment page is not ready yet 😅'),
                     backgroundColor: const Color(0xFF6C63FF),
                     behavior: SnackBarBehavior.floating,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -262,7 +262,7 @@ class _CartSummary extends StatelessWidget {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               ),
               child: const Text(
-                'Satın Al',
+                'Buy Now',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
               ),
             ),

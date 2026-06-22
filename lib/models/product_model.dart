@@ -13,13 +13,11 @@ class ProductModel {
     required this.imageUrl,
   });
 
-  // JSON verisini Dart nesnesine çeviren factory metodu
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
       id: json['id'],
       title: json['title'],
-      // JSON'dan integer gelebilme ihtimaline karşı double'a çeviriyoruz
-      price: json['price'].toDouble(), 
+      price: json['price'].toDouble(),
       description: json['description'],
       imageUrl: json['image'],
     );

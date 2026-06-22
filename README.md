@@ -1,17 +1,24 @@
-# mini_catalog
+# Mini Catalog
 
-A new Flutter project.
+Fake Store API'den ürün çeken, detay sayfası ve basit bir sepet sistemi olan Flutter uygulaması.
 
-## Getting Started
+## Kullanılan Sürümler
 
-This project is a starting point for a Flutter application.
+- Dart SDK: ^3.11.0
+- http: ^1.6.0
 
-A few resources to get you started if this is your first Flutter project:
+## Kurulum ve Çalıştırma (Installation & Run)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```bash
+git clone https://github.com/seniih/mini-catalog-app
+cd mini-catalog-app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+flutter pub get
+flutter run
+```
+
+Emulatör ya da bağlı bir cihaz açık olmalı. `flutter devices` ile kontrol edebilirsin.
+
+## Not
+
+Veri kaynağı olarak kullanılan Fake Store API'deki içerikler (ürün adları ve açıklamalar) İngilizce olduğundan uygulamanın arayüzü de İngilizcedir.
