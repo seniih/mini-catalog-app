@@ -62,7 +62,6 @@ class ProductDetailScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Kategori etiketi
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
@@ -70,7 +69,7 @@ class ProductDetailScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
-                        'Mağaza Ürünü',
+                        'Store Product',
                         style: TextStyle(
                           fontSize: 12,
                           color: Color(0xFF6C63FF),
@@ -80,7 +79,6 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
 
-                    // Ürün adı
                     Text(
                       product.title,
                       style: const TextStyle(
@@ -92,7 +90,6 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 16),
 
-                    // Fiyat
                     Row(
                       children: [
                         Text(
@@ -112,7 +109,7 @@ class ProductDetailScreen extends StatelessWidget {
                             border: Border.all(color: Colors.green.shade200),
                           ),
                           child: Text(
-                            'Stokta var',
+                            'In Stock',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.green.shade700,
@@ -124,9 +121,8 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
 
-                    // Açıklama başlığı
                     const Text(
-                      'Ürün Açıklaması',
+                      'Product Description',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -145,7 +141,6 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 32),
 
-                    // Sepete ekle butonu
                     SizedBox(
                       width: double.infinity,
                       height: 54,
@@ -154,7 +149,7 @@ class ProductDetailScreen extends StatelessWidget {
                           CartService.instance.add(product);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: const Text('Sepete eklendi! 🛒'),
+                              content: const Text('Added to cart! 🛒'),
                               backgroundColor: const Color(0xFF6C63FF),
                               behavior: SnackBarBehavior.floating,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -176,7 +171,7 @@ class ProductDetailScreen extends StatelessWidget {
                             Icon(Icons.shopping_cart_outlined, size: 20),
                             SizedBox(width: 8),
                             Text(
-                              'Sepete Ekle',
+                              'Add to Cart',
                               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                             ),
                           ],

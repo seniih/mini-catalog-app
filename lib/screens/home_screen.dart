@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(width: 8),
             const Text(
-              'Mini Katalog',
+              'Mini Catalog',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 20,
@@ -123,7 +123,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Banner
           Container(
             margin: const EdgeInsets.fromLTRB(16, 16, 16, 0),
             height: 140,
@@ -165,14 +164,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
                   child: Row(
                     children: [
-                      // Sol: Metin ve badge
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
-                              'Hoş Geldiniz! 👋',
+                              'Welcome! 👋',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
@@ -181,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             const SizedBox(height: 6),
                             Text(
-                              'Bugün ne aramak istersiniz?',
+                              'What are you looking for today?',
                               style: TextStyle(
                                 color: Colors.white.withOpacity(0.85),
                                 fontSize: 13,
@@ -195,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Text(
-                                '${productList.length} ürün mevcut',
+                                '${productList.length} products available',
                                 style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 12,
@@ -207,7 +205,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       const SizedBox(width: 16),
-                      // Sağ: Dekoratif ikon kutusu
                       Container(
                         width: 90,
                         height: 90,
@@ -222,7 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Icon(Icons.local_offer_rounded, color: Colors.white, size: 32),
                             const SizedBox(height: 4),
                             Text(
-                              'Fırsatlar',
+                              'Deals',
                               style: TextStyle(
                                 color: Colors.white.withOpacity(0.9),
                                 fontSize: 11,
@@ -242,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
           const Padding(
             padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
             child: Text(
-              'Öne Çıkan Ürünler',
+              'Featured Products',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
@@ -268,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
             CircularProgressIndicator(color: Color(0xFF6C63FF)),
             SizedBox(height: 16),
             Text(
-              'Ürünler yükleniyor...',
+              'Loading products...',
               style: TextStyle(color: Colors.grey, fontSize: 14),
             ),
           ],
@@ -284,19 +281,19 @@ class _HomeScreenState extends State<HomeScreen> {
             const Icon(Icons.wifi_off_rounded, size: 60, color: Colors.grey),
             const SizedBox(height: 12),
             const Text(
-              'Bağlantı hatası',
+              'Connection error',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.grey),
             ),
             const SizedBox(height: 6),
             const Text(
-              'İnternete bağlı olduğundan emin ol',
+              'Make sure you are connected to the internet',
               style: TextStyle(fontSize: 13, color: Colors.grey),
             ),
             const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: fetchProducts,
               icon: const Icon(Icons.refresh_rounded),
-              label: const Text('Tekrar Dene'),
+              label: const Text('Try Again'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF6C63FF),
                 foregroundColor: Colors.white,
@@ -351,7 +348,6 @@ class _ProductCard extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              // Ürün görseli
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(
@@ -371,7 +367,6 @@ class _ProductCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              // Ürün bilgisi
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
